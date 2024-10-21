@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(61, 45, 45);
+  height: 100vh;
+  cursor: pointer;
+}
+
+.maindiv {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.leftdiv {
+  min-height: 100vh;
+  width: 70%;
+  background-color: rgb(61, 45, 45);
+  border-right: 2px solid rgb(139, 190, 114);
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.leftText {
+  color: rgb(139, 190, 114);
+  margin: 4rem;
+}
+
+.rightdiv {
+  min-height: 100vh;
+  width: 30%;
+  background-color: rgb(61, 45, 45);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.btn {
+  height: auto; /* Let the height adjust automatically */
+  padding: 0.7rem; /* Space around the text */
+  text-align: center; /* Center text */
+  white-space: normal; /* Allow wrapping of text */
+  max-width: 100%; /* Fill available space */
+  width: auto; /* Allow width to adjust */
+  border: 1px solid rgb(139, 190, 114); /* Button border */
+  background-color: rgb(61, 45, 45); /* Button background */
+  color: rgb(139, 190, 114); /* Text color */
+}
+
+.btn:hover {
+  background-color: rgb(82, 60, 60);
+}
+
+.btn span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover > span {
+ transform: scale(1.1);
+}
+.rightText {
+  color: rgb(139, 190, 114);
+  margin: 1rem;
+}
+#action {
+  margin-top: 4rem;
+}
+#reveal {
+  background-color: rgb(61, 45, 45);
+  padding: 0.7rem;
+  color: rgb(139, 190, 114);
+  border: none;
+  margin: 1rem;
+}
+#reveal > span{
+   display: inline-block;
+   transition: transform 0.2s ease;
+   text-decoration: underline;
+}
+#reveal:hover {
+  border: 1px solid rgb(139, 190, 114);
+  background-color: rgb(82, 60, 60);
+}
+#reveal:hover > span{
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+img {
+  max-width: 100%; /* Allow the image to shrink within its container */
+  max-height: 800px;
+  height: auto; /* Maintain aspect ratio */
+  width: auto;
+  margin: 20px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  object-fit: scale-down;
+}
+
+h3 {
+  margin: 4rem;
+  color: rgb(211, 185, 189);
+}
+@media screen and (max-width:464px){
+     .rightdiv{
+      width: 40%;
+     }
+     .leftdiv{
+      width: 60%;
+     }
+}
+.leftText.t1,#action{
+  display: inline-block;
+}
+
+.leftText.t1:hover, #action:hover{
+    text-decoration: underline;
+}
+
